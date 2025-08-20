@@ -1,6 +1,16 @@
 repos:
-  - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
-    rev: v9.16.0
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
     hooks:
-      - id: commitlint
-        additional_dependencies: ['@commitlint/config-conventional']
+    -   id: check-yaml
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+-   repo: https://github.com/psf/black
+    rev: 22.10.0
+    hooks:
+    -   id: black
+# -   repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
+#     rev: v9.16.0
+#     hooks:
+#       - id: commitlint
+#         additional_dependencies: ['@commitlint/config-conventional']
