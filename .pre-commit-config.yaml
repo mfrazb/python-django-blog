@@ -9,6 +9,10 @@ repos:
     rev: 22.10.0
     hooks:
     -   id: black
+-   repo: https://github.com/opensource-nepal/commitlint
+    rev: v1.2.0
+    hooks:
+    -   id: commitlint
 # -   repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
 #     rev: v9.16.0
 #     hooks:
