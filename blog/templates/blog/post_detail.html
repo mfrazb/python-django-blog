@@ -1,4 +1,6 @@
-{% extends 'blog/base.html' %} {% block content %}
+{% extends 'blog/base.html' %}
+
+{% block content %}
 <article class="post">
   {% if post.published_date %}
   <time class="date">{{ post.published_date }}</time>
