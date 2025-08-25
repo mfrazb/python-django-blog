@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-from decouple import config
+
+# from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -39,8 +40,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "blog",
     "api",
-    "rest_framework",
     "corsheaders",
+    "phonenumber_field",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
@@ -80,15 +82,18 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": config("DB_NAME", default="django_tbc"),
-        "USER": config("DB_USER", default="django_user"),
-        "PASSWORD": config("DB_PASSWORD", default=""),
-        "HOST": config("DB_HOST", default="localhost"),
-        "PORT": config("DB_PORT", default="3306"),
-        "OPTIONS": {
-            "charset": "utf8mb4",
-        },
+        # MySQL Database SETUP FOR ORDERING SYSTEM
+        # "ENGINE": "django.db.backends.mysql",
+        # "NAME": config("DB_NAME", default="django_tbc"),
+        # "USER": config("DB_USER", default="django_user"),
+        # "PASSWORD": config("DB_PASSWORD", default=""),
+        # "HOST": config("DB_HOST", default="localhost"),
+        # "PORT": config("DB_PORT", default="3306"),
+        # "OPTIONS": {
+        #     "charset": "utf8mb4",
+        # },
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
@@ -157,4 +162,4 @@ CORS_ALLOWED_ORIGINS = [
 CORS_ALLOW_CREDENTIALS = True
 
 # For development only - remove in production
-CORS_ALLOW_ALL_ORIGINS = config("CORS_ALLOW_ALL_ORIGINS", default=False, cast=bool)
+CORS_ALLOW_ALL_ORIGINS = False
