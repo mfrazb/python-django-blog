@@ -1,3 +1,5 @@
+/* WRONG CSS FILE */
+
 body {
     padding-left: 15px;
 }
@@ -57,15 +59,15 @@ h4 {
     margin-bottom: 70px;
 }
 
-.post h2 a,
+/* .post h2 a,
 .post h2 a:visited {
-    color: #000000;
-}
+    color: #4a1e5f;
+} */
 
-.post > .date,
+/* .post > .date,
 .post > .actions {
     float: right;
-}
+} */
 
 .btn-secondary,
 .btn-secondary:visited {
@@ -78,4 +80,16 @@ h4 {
 .btn-secondary:hover {
     color: #FFFFFF;
     background-color: #C25100;
+}
+
+h1 a, h2 a {
+    color: #C25100;
+    font-family: 'Lobster';
+    text-decoration: none;
+}
+
+.post-link {
+    color: #C25100;
+    font-family: 'Lobster';
+    text-decoration: none;
 }
