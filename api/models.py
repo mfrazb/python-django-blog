@@ -9,7 +9,7 @@ class Member(models.Model):
     last_name = models.CharField(max_length=100)
     date_of_birth = models.DateField(blank=True, null=True)
     email = models.EmailField(unique=True)
-    phone_number = PhoneNumberField(region="US")
+    phone_number = PhoneNumberField()
     address = models.CharField(max_length=200)
     city = models.CharField(max_length=100)
     state = models.CharField(max_length=100)
